@@ -1,4 +1,5 @@
 syntax on
+set encoding=utf-8
 set nocompatible
 
 set number
@@ -16,7 +17,6 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 
-set showtabline=2
 set scrolloff=3
 
 set ignorecase
@@ -38,9 +38,16 @@ set clipboard^=unnamed
 call plug#begin('~/.vim/plugged')
 
 Plug 'kien/ctrlp.vim'
+Plug 'bling/vim-airline'
+Plug 'tpope/vim-fugitive'
+Plug 'powerman/vim-plugin-autosess'
 
 call plug#end()
 
 let mapleader = ","
 nnoremap <leader>. :CtrlPTag<cr>
+
+set laststatus=2
+let g:airline_powerline_fonts = 1
+
 
